@@ -16,6 +16,8 @@
 		31DBF91A1A04771C00054BFE /* State.m in Sources */ = {isa = PBXBuildFile; fileRef = 31DBF9141A04771C00054BFE /* State.m */; };
 		31DBF91B1A04771C00054BFE /* Store.m in Sources */ = {isa = PBXBuildFile; fileRef = 31DBF9161A04771C00054BFE /* Store.m */; };
 		31DBF91C1A04771C00054BFE /* Transaction.m in Sources */ = {isa = PBXBuildFile; fileRef = 31DBF9181A04771C00054BFE /* Transaction.m */; };
+		31DBF9211A0477B500054BFE /* CashRegister.m in Sources */ = {isa = PBXBuildFile; fileRef = 31DBF91E1A0477B500054BFE /* CashRegister.m */; };
+		31DBF9221A0477B500054BFE /* RetailerCustomization.m in Sources */ = {isa = PBXBuildFile; fileRef = 31DBF9201A0477B500054BFE /* RetailerCustomization.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,10 @@
 		31DBF9161A04771C00054BFE /* Store.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Store.m; sourceTree = "<group>"; };
 		31DBF9171A04771C00054BFE /* Transaction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Transaction.h; sourceTree = "<group>"; };
 		31DBF9181A04771C00054BFE /* Transaction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Transaction.m; sourceTree = "<group>"; };
+		31DBF91D1A0477B500054BFE /* CashRegister.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CashRegister.h; sourceTree = "<group>"; };
+		31DBF91E1A0477B500054BFE /* CashRegister.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CashRegister.m; sourceTree = "<group>"; };
+		31DBF91F1A0477B500054BFE /* RetailerCustomization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RetailerCustomization.h; sourceTree = "<group>"; };
+		31DBF9201A0477B500054BFE /* RetailerCustomization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RetailerCustomization.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +94,10 @@
 		317BBDE91A02D7F900E50696 /* CashMoneyBlocks */ = {
 			isa = PBXGroup;
 			children = (
+				31DBF91D1A0477B500054BFE /* CashRegister.h */,
+				31DBF91E1A0477B500054BFE /* CashRegister.m */,
+				31DBF91F1A0477B500054BFE /* RetailerCustomization.h */,
+				31DBF9201A0477B500054BFE /* RetailerCustomization.m */,
 				317BBDEE1A02D7F900E50696 /* AppDelegate.h */,
 				317BBDEF1A02D7F900E50696 /* AppDelegate.m */,
 				31DBF9111A04771C00054BFE /* Product.h */,
@@ -232,7 +242,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				31DBF91C1A04771C00054BFE /* Transaction.m in Sources */,
+				31DBF9211A0477B500054BFE /* CashRegister.m in Sources */,
 				31DBF9191A04771C00054BFE /* Product.m in Sources */,
+				31DBF9221A0477B500054BFE /* RetailerCustomization.m in Sources */,
 				317BBDF01A02D7F900E50696 /* AppDelegate.m in Sources */,
 				317BBDED1A02D7F900E50696 /* main.m in Sources */,
 				31DBF91B1A04771C00054BFE /* Store.m in Sources */,
