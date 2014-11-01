@@ -30,7 +30,7 @@ This class will also have two methods called `applyCoupons` and `calculateTax`. 
 
 3) We are your client so we will provide the logic code here for taxes and for coupons. We also provide a `generateTestData` method below to ensure you have implemented the whole `CashRegister` system with its custom logic correctly. To do so, create a `CashRegister` in your AppDelegate and `applyCoupons` and calculateTax` and see what you get back. The correct results can be found at the following link: JOE - I'VE SEEN YOU DO THIS ON A COUPLE OF LABS IN THE PAST; ONCE WE GET THIS WORKING, WE CAN ADD THE "RESULTS" IN SOMEWHERE SINCE WE WON'T YET HAVE TESTS.
 
-Tax Logic
+####Tax Logic
 ```objc
 
 NSNumber *taxAmount = @([[self netPrice:transaction.product] floatValue] * [cashRegister.store.state.taxRate floatValue]);  // JOE - WARNING THAT THIS MAY CREATE A RETAIN CYCLE BECAUSE OF CASHREGISTER. IS THIS A WEAKSELF SITUATION WE NEED TO IMPLEMENT? (CAN LOOK INTO THIS FURTHER ON MONDAY MORNING.)
@@ -67,19 +67,14 @@ NSNumber *taxAmount = @([[self netPrice:transaction.product] floatValue] * [cash
 ```
 
 
-Coupon Logic
-
+####Coupon Logic
 ```objc
-
 To be completed.
-
 ```
 
 
-`generateTransactionData`
-
+####Transaction Data Method
 ```objc
-
 - (NSArray *)generateTransactionData {
     
     Product *apple = [[Product alloc] initWithProductDescription:@"Granny Smith" UPC:@"0000000000415" Price:@0.95 DiscountInDollars:@0.00 Size:@1 Measure:@"ea" andProductCategory:ProductCategoryGrocery];
