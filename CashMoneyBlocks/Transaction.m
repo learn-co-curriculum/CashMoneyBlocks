@@ -25,7 +25,7 @@
 }
 
 - (instancetype)init {
-    return [self initWithProduct:nil Quantity:@0];
+    return [self initWithProduct:nil Quantity:@0 Date:[NSDate date]];
 }
 
 @end
