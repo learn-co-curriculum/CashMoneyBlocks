@@ -7,11 +7,11 @@ languages: objc
 
 ## Instructions
 
-You are the lead software engineer for a manufacturer that makes the cash register hardware. Clients generally want to be able to program their cash registers after the fact to use their own receipt formats and program items into the register such that the price can change for week to week (e.g. items on sale; produce which is variable, etc.)
+You are the lead software engineer for a manufacturer that makes the cash register hardware. Clients generally want to be able to program their cash registers after the fact to use their own receipt formats and program items into the register such that the pricing rules can change periodically (e.g. couponing, taxes, etc.)
 
 As the manufacturer you do NOT want the end user to modify the cash register code, so you decide you are going to give them blocks as arguments for the methods that build the format of each transaction on the receipt so that they do not have to change anything in the register library itself.
 
-To speed this up a little, your junior developer has provided you with a basic `Product`, `Transaction`, `Store` and `State` class, complete with properties and initializers where needed. (If you would like some practice creating custom `NSObject` subclasses with initializers, you can get instructions for how to create your own versions of these classes [here]() JOE - WILL DO THIS MONDAY MORNING. Just delete the ones we gave you and start from scratch!)
+To speed this up a little, your junior developer has provided you with a basic `Product`, `Transaction`, `Store` and `State` class, complete with properties and initializers where needed.
 
 As senior developer, you have to do the heavy lifting of the blocks. Ha. Ha. Ha.
 
@@ -34,7 +34,7 @@ This class will also have two methods called `applyCoupons` and `calculateTax`. 
 Tax Logic
 ```objc
 
-NSNumber *taxAmount = @([[self netPrice:transaction.product] floatValue] * [cashRegister.store.state.taxRate floatValue]);  // JOE - WARNING THAT THIS MAY CREATE A RETAIN CYCLE BECAUSE OF CASHREGISTER. DO YOU WANT TO MODIFY IMPLEMENTATION?
+NSNumber *taxAmount = @([[self netPrice:transaction.product] floatValue] * [cashRegister.store.state.taxRate floatValue]);  // JOE - WARNING THAT THIS MAY CREATE A RETAIN CYCLE BECAUSE OF CASHREGISTER. IS THIS A WEAKSELF SITUATION WE NEED TO IMPLEMENT? (CAN LOOK INTO THIS FURTHER ON MONDAY MORNING.)
         
         switch (transaction.product.productCategory) {
             case ProductCategoryGrocery:
@@ -71,7 +71,9 @@ NSNumber *taxAmount = @([[self netPrice:transaction.product] floatValue] * [cash
 Coupon Logic
 
 ```objc
-JOE - HAVEN'T WRITTEN THIS LOGIC YET. MAY REQUIRE SOME MINOR CHANGES TO OTHER CLASSES TO WRITE SOME GOOD LOGIC. MAYBE THIS IS THE PIECE YOU CAN FILL IN OR I CAN DO MONDAY MORNING TOO.
+
+To be completed.
+
 ```
 
 
@@ -114,13 +116,11 @@ JOE - HAVEN'T WRITTEN THIS LOGIC YET. MAY REQUIRE SOME MINOR CHANGES TO OTHER CL
 
 ```
 
-JOE - SOLUTION IS NOT YET COMPLETE. ANY CONCERNS ABOUT THIS WORKING AS PLANNED? I HAVE UPLOADED THE LATEST VERSION OF THE SOLUTION TO THE SOLUTION BRANCH SO YOU CAN SEE THE WHOLE THING AS IT STANDS NOW.
-
 ## Advanced
 Read up on how to compile a static library in Objective-C, to ensure you know how to keep your end user from modifying your lovely code base! Commit before compiling.
 
-## Hints
+## Notes
 
-* Enums are used here to give numeric values more meaning. Therefore instead of using the number "1" to mean a product in the apparel category, we can use `ProductCategoryApparel` instead. JOE - HOW DO YOU FEEL ABOUT THE FACT THAT I USED ONE?
+* Enums are used here to give numeric values more meaning. Therefore instead of using the number "1" to mean a product in the apparel category, we can use `ProductCategoryApparel` instead.
 
-* Consider using a "switch" statement. If you don't know what this is, feel free to stick with more traditional "if" statements. - JOE - DO THEY KNOW THESE ALREADY? IF NOT, COULD BE MOVED TO ADVANCED SECTION.
+* Check out the "switch" statement. It takes the place of an "if" statement as a conditional.
