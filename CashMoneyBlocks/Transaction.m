@@ -11,7 +11,7 @@
 @implementation Transaction
 
 
-- (instancetype)initWithProduct:(Product *)product Quantity:(NSNumber *)quantity Date:(NSDate)dateOfTransaction
+- (instancetype)initWithProduct:(Product *)product Quantity:(NSNumber *)quantity Date:(NSDate *)dateOfTransaction
 {
     self = [super init];
     if (self) {
