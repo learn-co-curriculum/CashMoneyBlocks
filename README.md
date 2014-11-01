@@ -24,11 +24,11 @@ Here is what you will need:
 
 as well as two block properties. Since this is a lab on blocks, we'll let you figure out how to write those up. You'll want one for `couponLogic` and another for `taxLogic`. (JOE - SHOULD WE TELL THEM WHAT THE ARGUMENTS AND RETURN VALUES ARE FOR THESE BLOCKS?)
 
-This class will also have two methods called `applyCoupons` and `calculateTax`. They will NSLog the total value of all coupons and total amount of tax for all transactions on the `CashRegister` respectively.
+This class will also have two methods called `applyCoupons` and `calculateTax`. They will both return an NSNumber for the total dollars saved by using coupons and the total amount of tax for all transactions on the `CashRegister` respectively.
 
-2) A `RetailerCustomization` class that has a method to `customizeRegisterLogic:`.
+2) A `RetailerCustomization` class that has a method to `customizeRegisterLogic:` (where the user of the `CashRegister` will implement the `taxLogic` and `couponLogic` block properties that you declared in `CashRegister`).
 
-3) We are your client so we will provide the logic code here for taxes and for coupons. We also provide a `generateTestData` method below to ensure you have implemented the whole `CashRegister` system with its custom logic correctly. To do so, create a `CashRegister` in your AppDelegate and `applyCoupons` and `calculateTax` method and see what you get back in values from the register. If you've done it correctly, you will be given the total savings from coupons and the total tax collected of all transactions from the store.
+3) We will serve as the "user" so we have provided the logic code to complete the `taxLogic` and `couponLogic` definitions below, that you can cut and paste in. We also provide a `generateTestData` method below to ensure you have implemented the whole `CashRegister` system with its custom logic correctly. To do so, create a `CashRegister` in your AppDelegate and `applyCoupons` and `calculateTax` methods and see what you get back in values from the register. If you've done it correctly, you will be given the total savings from coupons and the total tax collected of all transactions from the store.
 
 ####Tax Logic
 ```objc
