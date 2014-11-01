@@ -17,7 +17,7 @@
 @property (nonatomic, copy) NSNumber * (^couponLogic)(Transaction *transaction);
 @property (nonatomic, copy) NSNumber * (^taxLogic)(Transaction *transaction);
 
--(void)applyCoupons;
--(void)calculateTax;
+-(NSNumber *)applyCoupons;
+-(NSNumber *)calculateTax;
 
 @end

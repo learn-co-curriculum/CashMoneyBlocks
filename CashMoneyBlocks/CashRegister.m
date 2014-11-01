@@ -10,17 +10,27 @@
 
 @implementation CashRegister
 
--(void)applyCoupons {
+-(NSNumber *)applyCoupons {
+    
+    NSNumber *totalSaved = @0;
     
     for (Transaction *transaction in self.transactions) {
-        self.couponLogic(transaction);
+        totalSaved = self.couponLogic(transaction);
     }
+    
+    return totalSaved;
 }
 
--(void)calculateTax {
+-(NSNumber *)calculateTax {
+    
+    NSNumber *totalTax = @0;
+    
     for (Transaction *transaction in self.transactions) {
-        self.taxLogic(transaction);
+        totalTax = self.taxLogic(transaction);
     }
+    
+    return totalTax;
+    
 }
 
 @end
