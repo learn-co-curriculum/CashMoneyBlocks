@@ -28,8 +28,7 @@ This class will also have two methods called `applyCoupons` and `calculateTax`. 
 
 2) A `RetailerCustomization` class that has a method to `customizeRegisterLogic:`.
 
-3) We are your client so we will provide the logic code here for taxes and for coupons. We also provide a `generateTestData` method below to ensure you have implemented the whole `CashRegister` system with its custom logic correctly. To do so, create a `CashRegister` in your AppDelegate and `applyCoupons` and calculateTax` and see what you get back. The correct results can be found at the following link:
-
+3) We are your client so we will provide the logic code here for taxes and for coupons. We also provide a `generateTestData` method below to ensure you have implemented the whole `CashRegister` system with its custom logic correctly. To do so, create a `CashRegister` in your AppDelegate and `applyCoupons` and calculateTax` and see what you get back. The correct results can be found at the following link: JOE - I'VE SEEN YOU DO THIS ON A COUPLE OF LABS IN THE PAST; ONCE WE GET THIS WORKING, WE CAN ADD THE "RESULTS" IN SOMEWHERE SINCE WE WON'T YET HAVE TESTS.
 
 Tax Logic
 ```objc
