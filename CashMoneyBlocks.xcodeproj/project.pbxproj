@@ -12,6 +12,10 @@
 		317BBDF61A02D7F900E50696 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 317BBDF41A02D7F900E50696 /* Main.storyboard */; };
 		317BBDF81A02D7F900E50696 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 317BBDF71A02D7F900E50696 /* Images.xcassets */; };
 		317BBDFB1A02D7F900E50696 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 317BBDF91A02D7F900E50696 /* LaunchScreen.xib */; };
+		31DBF9191A04771C00054BFE /* Product.m in Sources */ = {isa = PBXBuildFile; fileRef = 31DBF9121A04771C00054BFE /* Product.m */; };
+		31DBF91A1A04771C00054BFE /* State.m in Sources */ = {isa = PBXBuildFile; fileRef = 31DBF9141A04771C00054BFE /* State.m */; };
+		31DBF91B1A04771C00054BFE /* Store.m in Sources */ = {isa = PBXBuildFile; fileRef = 31DBF9161A04771C00054BFE /* Store.m */; };
+		31DBF91C1A04771C00054BFE /* Transaction.m in Sources */ = {isa = PBXBuildFile; fileRef = 31DBF9181A04771C00054BFE /* Transaction.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +39,14 @@
 		317BBDFA1A02D7F900E50696 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		317BBE001A02D7F900E50696 /* CashMoneyBlocksTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CashMoneyBlocksTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		317BBE051A02D7F900E50696 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		31DBF9111A04771C00054BFE /* Product.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Product.h; sourceTree = "<group>"; };
+		31DBF9121A04771C00054BFE /* Product.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Product.m; sourceTree = "<group>"; };
+		31DBF9131A04771C00054BFE /* State.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = State.h; sourceTree = "<group>"; };
+		31DBF9141A04771C00054BFE /* State.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = State.m; sourceTree = "<group>"; };
+		31DBF9151A04771C00054BFE /* Store.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Store.h; sourceTree = "<group>"; };
+		31DBF9161A04771C00054BFE /* Store.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Store.m; sourceTree = "<group>"; };
+		31DBF9171A04771C00054BFE /* Transaction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Transaction.h; sourceTree = "<group>"; };
+		31DBF9181A04771C00054BFE /* Transaction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Transaction.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +90,14 @@
 			children = (
 				317BBDEE1A02D7F900E50696 /* AppDelegate.h */,
 				317BBDEF1A02D7F900E50696 /* AppDelegate.m */,
+				31DBF9111A04771C00054BFE /* Product.h */,
+				31DBF9121A04771C00054BFE /* Product.m */,
+				31DBF9131A04771C00054BFE /* State.h */,
+				31DBF9141A04771C00054BFE /* State.m */,
+				31DBF9151A04771C00054BFE /* Store.h */,
+				31DBF9161A04771C00054BFE /* Store.m */,
+				31DBF9171A04771C00054BFE /* Transaction.h */,
+				31DBF9181A04771C00054BFE /* Transaction.m */,
 				317BBDF41A02D7F900E50696 /* Main.storyboard */,
 				317BBDF71A02D7F900E50696 /* Images.xcassets */,
 				317BBDF91A02D7F900E50696 /* LaunchScreen.xib */,
@@ -211,8 +231,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				31DBF91C1A04771C00054BFE /* Transaction.m in Sources */,
+				31DBF9191A04771C00054BFE /* Product.m in Sources */,
 				317BBDF01A02D7F900E50696 /* AppDelegate.m in Sources */,
 				317BBDED1A02D7F900E50696 /* main.m in Sources */,
+				31DBF91B1A04771C00054BFE /* Store.m in Sources */,
+				31DBF91A1A04771C00054BFE /* State.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
