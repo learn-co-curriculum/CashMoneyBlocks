@@ -29,7 +29,7 @@ as well as two block properties. Since this is a lab on blocks, we'll let you fi
 
 This class will also have two methods called `applyCoupons` and `calculateTax`. They will both return an NSNumber for the total dollars saved by using coupons and the total amount of tax for all transactions on the `CashRegister` respectively.
 
-2) A `RetailerCustomization` class that has a method to `customizeRegisterLogic:` (where the user of the `CashRegister` will implement the `taxLogic` and `couponLogic` block properties that you declared in `CashRegister`).
+2) A `Retailer` class that has a method to `customizeRegisterLogic:` (where the user of the `CashRegister` will implement the `taxLogic` and `couponLogic` block properties that you declared in `CashRegister`).
 
 3) We will serve as the "user" so we have provided the logic code to complete the `taxLogic` and `couponLogic` definitions below, that you can cut and paste in. We also provide a `generateTestData` method below to ensure you have implemented the whole `CashRegister` system with its custom logic correctly. 
 
