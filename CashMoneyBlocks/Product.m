@@ -11,10 +11,10 @@
 @implementation Product
 
 - (instancetype)init {
-    return [self initWithProductDescription:@"" UPC:@"" Price:@0.00 DiscountInDollars:@0.00 Size:@0 Measure:@"" andProductCategory:ProductCategoryUndefined];
+    return [self initWithProductDescription:@"" UPC:@"" Price:@0.00 Size:@0 Measure:@"" andProductCategory:ProductCategoryUndefined];
 }
 
-- (instancetype)initWithProductDescription:(NSString *)productDescription UPC:(NSString *)upc Price:(NSNumber *)price DiscountInDollars:(NSNumber *)discountInDollars Size:(NSNumber *)size Measure:(NSString *)measure andProductCategory:(ProductCategory)productCategory{
+- (instancetype)initWithProductDescription:(NSString *)productDescription UPC:(NSString *)upc Price:(NSNumber *)price Size:(NSNumber *)size Measure:(NSString *)measure andProductCategory:(ProductCategory)productCategory{
     
     self = [super init];
     
@@ -22,9 +22,9 @@
         _productDescription = productDescription;
         _UPC = upc;
         _price = price;
-        _discountInDollars = discountInDollars;
         _size = size;
         _measure = measure;
+        _productCategory = productCategory;
     }
     
     return self;

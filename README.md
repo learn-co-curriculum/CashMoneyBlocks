@@ -22,91 +22,41 @@ Here is what you will need:
 @property (strong, nonatomic) Store *store;
 @property (strong, nonatomic) NSArray *transactions;
 
-as well as two block properties. Since this is a lab on blocks, we'll let you figure out how to write those up. You'll want one for `couponLogic` and another for `taxLogic`. (JOE - SHOULD WE TELL THEM WHAT THE ARGUMENTS AND RETURN VALUES ARE FOR THESE BLOCKS?)
+as well as two block properties. Since this is a lab on blocks, we'll let you figure out how to write those up. You'll want one for `couponLogic` and another for `taxLogic`.
 
 This class will also have two methods called `applyCoupons` and `calculateTax`. They will both return an NSNumber for the total dollars saved by using coupons and the total amount of tax for all transactions on the `CashRegister` respectively.
 
 2) A `RetailerCustomization` class that has a method to `customizeRegisterLogic:` (where the user of the `CashRegister` will implement the `taxLogic` and `couponLogic` block properties that you declared in `CashRegister`).
 
-3) We will serve as the "user" so we have provided the logic code to complete the `taxLogic` and `couponLogic` definitions below, that you can cut and paste in. We also provide a `generateTestData` method below to ensure you have implemented the whole `CashRegister` system with its custom logic correctly. To do so, create a `CashRegister` in your AppDelegate and `applyCoupons` and `calculateTax` methods and see what you get back in values from the register. If you've done it correctly, you will be given the total savings from coupons and the total tax collected of all transactions from the store.
+3) We will serve as the "user" so we have provided the logic code to complete the `taxLogic` and `couponLogic` definitions below, that you can cut and paste in. We also provide a `generateTestData` method below to ensure you have implemented the whole `CashRegister` system with its custom logic correctly. 
+
+Finally, to test all of your logic, create a `CashRegister` (and related necessary objects) in your AppDelegate and `applyCoupons` and `calculateTax` methods and see what you get back in values from the register.  If you've done it correctly, you will be given the total savings from coupons and the total tax collected of all transactions from the store. (Feel free to just NSLog the results since there are no tests in this lab.)
+
+Note: The following tax logic code will cause a retain cycle. Read up on retain cycles with the links below to learn more. However, if you don't understand, just leave the code as is.
+
+* [Capturing My(self)](http://blackpixel.com/blog/2014/03/capturing-myself.html)
+* [Objective-C Block Caveat](http://albertodebortoli.github.io/blog/2013/08/03/objective-c-blocks-caveat/)
+* [Debugging Retain Cycles](http://www.reigndesign.com/blog/debugging-retain-cycles-in-objective-c-four-likely-culprits/)
 
 ####Tax Logic
 ```objc
 
-NSNumber *taxAmount = @([[self netPrice:transaction.product] floatValue] * [cashRegister.store.state.taxRate floatValue]);  // JOE - WARNING THAT THIS MAY CREATE A RETAIN CYCLE BECAUSE OF CASHREGISTER. IS THIS A WEAKSELF SITUATION WE NEED TO IMPLEMENT? (CAN LOOK INTO THIS FURTHER ON MONDAY MORNING.)
-        
-        switch (transaction.product.productCategory) {
-            case ProductCategoryGrocery:
-                
-                return @0;
-                
-            case ProductCategoryApparel:
-                
-                if ([cashRegister.store.state.abbreviation isEqualToString:@"NY"] &&  [[self netPrice:transaction.product] floatValue]  < 100)
-                {
-                    return @0;
-                }
-                
-                return taxAmount;
-                
-            case ProductCategoryEducation:
-                
-                //should be based on date of transaction, but will come back to this later...
 
-                return nil;
-                
-            case ProductCategoryLuxuryItem:
-                
-                return @([taxAmount floatValue] * 2);
-                
-            default:
-                return taxAmount;
-        }
-        
-        return nil;
 ```
 
 
 ####Coupon Logic
 ```objc
-To be completed.
+
+ 
+
 ```
 
 
 ####Transaction Data Method
 ```objc
-- (NSArray *)generateTransactionData {
-    
-    Product *apple = [[Product alloc] initWithProductDescription:@"Granny Smith" UPC:@"0000000000415" Price:@0.95 DiscountInDollars:@0.00 Size:@1 Measure:@"ea" andProductCategory:ProductCategoryGrocery];
-    
-    Product *cereal = [[Product alloc] initWithProductDescription:@"Cracklin' Oat Bran" UPC:@"0038000045301" Price:@4.99 DiscountInDollars:@1.20 Size:@17 Measure:@"oz" andProductCategory:ProductCategoryGrocery];
-    
-    Product *vanillaGoGurt = [[Product alloc] initWithProductDescription:@"Vanilla GoGurt - To Stay, 7 oz" UPC:@"0038000045301" Price:@1.99 DiscountInDollars:@0.00 Size:@17 Measure:@"oz" andProductCategory:ProductCategoryGrocery];
-    
-    Product *sliceSoda = [[Product alloc] initWithProductDescription:@"That soda that you've probably heard of was once a competitor to Sprite" UPC:@"12000810060" Price:@1.99 DiscountInDollars:@0.50 Size:@67.628 Measure:@"fl oz" andProductCategory:ProductCategoryGrocery];
-    
-    Product *siliconValleyHoodie = [[Product alloc] initWithProductDescription:@"Silicon Valley Hoodie - Size M" UPC:@"55000030387" Price:@42.99 DiscountInDollars:@0.00 Size:@2 Measure:@"Mens Tee" andProductCategory:ProductCategoryGrocery];
-    
-    Product *functionalProgrammingWithSwiftBook = [[Product alloc] initWithProductDescription:@"Functional Programming in Swift" UPC:@"66611000000" Price:@29.99 DiscountInDollars:@4.00 Size:@417 Measure:@"pages" andProductCategory:ProductCategoryGrocery];
 
-    
-    Transaction *transactionOne = [[Transaction alloc] initWithProduct:apple Quantity:@1];
-    
-    Transaction *transactionTwo = [[Transaction alloc] initWithProduct:cereal Quantity:@2];
-    
-    Transaction *transactionThree = [[Transaction alloc] initWithProduct:vanillaGoGurt Quantity:@10];
-    
-    Transaction *transactionFour = [[Transaction alloc] initWithProduct:sliceSoda Quantity:@1];
 
-    Transaction *transactionFive = [[Transaction alloc] initWithProduct:siliconValleyHoodie Quantity:@1];
-    
-    Transaction *transactionSix = [[Transaction alloc] initWithProduct:functionalProgrammingWithSwiftBook Quantity:@1];
-
-    NSArray *transactions = @[transactionOne, transactionTwo, transactionThree, transactionFour, transactionFive, transactionSix];
-    
-    return transactions;
-    
-}
 
 ```
 
@@ -115,6 +65,10 @@ Read up on how to compile a static library in Objective-C, to ensure you know ho
 
 ## Notes
 
-* Enums are used here to give numeric values more meaning. Therefore instead of using the number "1" to mean a product in the apparel category, we can use `ProductCategoryApparel` instead.
+* Enums are used here to give numeric values more meaning. Therefore instead of using the number "1" to mean a product in the apparel category, we can use `ProductCategoryApparel` instead. For more information, check out [this article](http://nshipster.com/ns_enum-ns_options/)) on the various ways to declare ENUM. (You can find our declaration of it in the `Product.h` file.)
 
-* Check out the "switch" statement. It takes the place of an "if" statement as a conditional.
+* Check out the "switch" statements in our tax and coupon logic. They take the place of "if" statements as a conditional.
+
+* In a real life scenario, we would likely have an array of products and their quantities as part of the `Transaction` object; but for today, we've chosen to simplify a bit for the sake of getting to the real point of this lab, which is blocks!
+
+* In our contrived example, the tax gets applied to the items gross price (i.e. before the coupon discount gets applied). Feel free to try to get fancy and make them work together if you get this far!

@@ -13,7 +13,6 @@
 @property (strong, nonatomic) Product *product;
 @property (strong, nonatomic) NSNumber *quantity;
 @property (strong, nonatomic) NSNumber *fullTransactionValue;
-@property (strong, nonatomic) NSNumber *discountedTransactionValue;
 @property (strong, nonatomic) NSDate *dateOfTransaction;
 
 - (instancetype)initWithProduct:(Product *)product Quantity:(NSNumber *)quantity Date:(NSDate *)dateOfTransaction;
