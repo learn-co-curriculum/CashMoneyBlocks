@@ -81,6 +81,21 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		3178571D1A07E231002BA91C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				31DBF9111A04771C00054BFE /* Product.h */,
+				31DBF9121A04771C00054BFE /* Product.m */,
+				31DBF9131A04771C00054BFE /* State.h */,
+				31DBF9141A04771C00054BFE /* State.m */,
+				31DBF9151A04771C00054BFE /* Store.h */,
+				31DBF9161A04771C00054BFE /* Store.m */,
+				31DBF9171A04771C00054BFE /* Transaction.h */,
+				31DBF9181A04771C00054BFE /* Transaction.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		317BBDDE1A02D7F900E50696 = {
 			isa = PBXGroup;
 			children = (
@@ -106,14 +121,7 @@
 			children = (
 				317BBDEE1A02D7F900E50696 /* AppDelegate.h */,
 				317BBDEF1A02D7F900E50696 /* AppDelegate.m */,
-				31DBF9111A04771C00054BFE /* Product.h */,
-				31DBF9121A04771C00054BFE /* Product.m */,
-				31DBF9131A04771C00054BFE /* State.h */,
-				31DBF9141A04771C00054BFE /* State.m */,
-				31DBF9151A04771C00054BFE /* Store.h */,
-				31DBF9161A04771C00054BFE /* Store.m */,
-				31DBF9171A04771C00054BFE /* Transaction.h */,
-				31DBF9181A04771C00054BFE /* Transaction.m */,
+				3178571D1A07E231002BA91C /* Model */,
 				317BBDF41A02D7F900E50696 /* Main.storyboard */,
 				317BBDF71A02D7F900E50696 /* Images.xcassets */,
 				317BBDF91A02D7F900E50696 /* LaunchScreen.xib */,
