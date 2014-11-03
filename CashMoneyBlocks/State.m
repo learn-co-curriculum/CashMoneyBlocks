@@ -10,4 +10,12 @@
 
 @implementation State
 
+-(NSNumber *)taxRate {
+    if ([self.abbreviation isEqualToString:@"NY"]) {
+        return @0.10;
+    };
+    
+    return @0.07;
+}
+
 @end

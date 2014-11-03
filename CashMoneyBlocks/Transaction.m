@@ -19,7 +19,6 @@
         _quantity = quantity;
         _dateOfTransaction = dateOfTransaction;
         _fullTransactionValue = @([product.price floatValue] * [quantity floatValue]);
-        _discountedTransactionValue = @([product.price floatValue] * [quantity floatValue] - [product.discountInDollars floatValue] * [quantity floatValue]);
     }
     return self;
 }
