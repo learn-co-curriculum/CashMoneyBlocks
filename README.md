@@ -22,6 +22,7 @@ Here is what you will need:
 1) A `CashRegister` class with four properties including:
 
 @property (strong, nonatomic) Store *store;
+
 @property (strong, nonatomic) NSArray *transactions;
 
 as well as two block properties. Since this is a lab on blocks, we'll let you figure out how to write those up. You'll want one for `couponLogic` and another for `taxLogic`.
