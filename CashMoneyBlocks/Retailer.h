@@ -9,8 +9,9 @@
 #import <Foundation/Foundation.h>
 #import "CashRegister.h"
 
-@interface RetailerCustomization : NSObject
+@interface Retailer : NSObject
 
 - (void)customizeRegisterLogic:(CashRegister *)cashRegister;
+- (NSArray *)generateTransactionData;
 
 @end
