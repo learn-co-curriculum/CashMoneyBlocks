@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "CashRegister.h"
+#import "Retailer.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +19,20 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    CashRegister *cashRegister = [[CashRegister alloc] init];
+    Store *store = [[Store alloc] init];
+    State *state = [[State alloc] init];
+    store.state = state;
+    state.abbreviation = @"NY";
+    cashRegister.store = store;
+    Retailer *retailer = [[Retailer alloc] init];
+    cashRegister.transactions = [retailer generateTransactionData];
+    [retailer customizeRegisterLogic:cashRegister];
+    
+    NSLog(@"Coupon total:%@",[cashRegister applyCoupons]);
+    NSLog(@"Tax total:%@",[cashRegister calculateTax]);
+    
     return YES;
 }
 

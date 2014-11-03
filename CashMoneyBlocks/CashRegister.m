@@ -15,7 +15,7 @@
     NSNumber *totalSaved = @0;
     
     for (Transaction *transaction in self.transactions) {
-        totalSaved = self.couponLogic(transaction);
+        totalSaved = @([totalSaved floatValue] + [self.couponLogic(transaction) floatValue]);
     }
     
     return totalSaved;
@@ -26,7 +26,7 @@
     NSNumber *totalTax = @0;
     
     for (Transaction *transaction in self.transactions) {
-        totalTax = self.taxLogic(transaction);
+        totalTax = @([totalTax floatValue] + [self.taxLogic(transaction) floatValue]);
     }
     
     return totalTax;
