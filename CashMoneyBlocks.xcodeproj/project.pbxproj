@@ -16,6 +16,7 @@
 		31DBF91A1A04771C00054BFE /* State.m in Sources */ = {isa = PBXBuildFile; fileRef = 31DBF9141A04771C00054BFE /* State.m */; };
 		31DBF91B1A04771C00054BFE /* Store.m in Sources */ = {isa = PBXBuildFile; fileRef = 31DBF9161A04771C00054BFE /* Store.m */; };
 		31DBF91C1A04771C00054BFE /* Transaction.m in Sources */ = {isa = PBXBuildFile; fileRef = 31DBF9181A04771C00054BFE /* Transaction.m */; };
+		7FA1B3278F83DFF2AAEFEE33 /* libPods-CashMoneyBlocksTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C255C4EC37E0F78CF84C2A0 /* libPods-CashMoneyBlocksTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,9 @@
 		31DBF9161A04771C00054BFE /* Store.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Store.m; sourceTree = "<group>"; };
 		31DBF9171A04771C00054BFE /* Transaction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Transaction.h; sourceTree = "<group>"; };
 		31DBF9181A04771C00054BFE /* Transaction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Transaction.m; sourceTree = "<group>"; };
+		4D1EB6CE20110279FE16CE50 /* Pods-CashMoneyBlocksTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CashMoneyBlocksTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CashMoneyBlocksTests/Pods-CashMoneyBlocksTests.release.xcconfig"; sourceTree = "<group>"; };
+		6C255C4EC37E0F78CF84C2A0 /* libPods-CashMoneyBlocksTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CashMoneyBlocksTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		89D40F21CA15CE83881FD0B1 /* Pods-CashMoneyBlocksTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CashMoneyBlocksTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CashMoneyBlocksTests/Pods-CashMoneyBlocksTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,18 +65,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7FA1B3278F83DFF2AAEFEE33 /* libPods-CashMoneyBlocksTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2D22D41454C954F3E949D939 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				89D40F21CA15CE83881FD0B1 /* Pods-CashMoneyBlocksTests.debug.xcconfig */,
+				4D1EB6CE20110279FE16CE50 /* Pods-CashMoneyBlocksTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		317BBDDE1A02D7F900E50696 = {
 			isa = PBXGroup;
 			children = (
 				317BBDE91A02D7F900E50696 /* CashMoneyBlocks */,
 				317BBE031A02D7F900E50696 /* CashMoneyBlocksTests */,
 				317BBDE81A02D7F900E50696 /* Products */,
+				2D22D41454C954F3E949D939 /* Pods */,
+				9664B9B356430C953DD33A2F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -131,6 +147,14 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		9664B9B356430C953DD33A2F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6C255C4EC37E0F78CF84C2A0 /* libPods-CashMoneyBlocksTests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -155,9 +179,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 317BBE0D1A02D7F900E50696 /* Build configuration list for PBXNativeTarget "CashMoneyBlocksTests" */;
 			buildPhases = (
+				27CF50DF5975FFD1B686F5A1 /* Check Pods Manifest.lock */,
 				317BBDFC1A02D7F900E50696 /* Sources */,
 				317BBDFD1A02D7F900E50696 /* Frameworks */,
 				317BBDFE1A02D7F900E50696 /* Resources */,
+				2EF601C3FE9C7907344F420E /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -225,6 +251,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		27CF50DF5975FFD1B686F5A1 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		2EF601C3FE9C7907344F420E /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CashMoneyBlocksTests/Pods-CashMoneyBlocksTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		317BBDE31A02D7F900E50696 /* Sources */ = {
@@ -375,6 +434,7 @@
 		};
 		317BBE0E1A02D7F900E50696 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 89D40F21CA15CE83881FD0B1 /* Pods-CashMoneyBlocksTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -394,6 +454,7 @@
 		};
 		317BBE0F1A02D7F900E50696 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4D1EB6CE20110279FE16CE50 /* Pods-CashMoneyBlocksTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
