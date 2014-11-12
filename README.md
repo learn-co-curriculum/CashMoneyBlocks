@@ -9,11 +9,13 @@ languages: objc
 
 **You are highly encouraged to read through the entire readme before attempting to do this lab!**
 
-You are the lead software engineer for a manufacturer that makes the cash register hardware. Clients generally want to be able to program their cash registers after the fact to use their own receipt formats and program items into the register such that the pricing rules can change periodically (e.g. couponing, taxes, etc.)
+You are the lead software engineer for a manufacturer that makes the cash register hardware. Clients (e.g. Target, Walmart, Macys, Whole Foods) generally want to be able to program their cash registers after the fact to use their own receipt formats and program items into the register such that the pricing rules can change periodically (e.g. couponing, taxes, etc.)
 
-As the manufacturer you do NOT want the end user to modify the cash register code, so you decide you are going to give them blocks as arguments for the methods that build the format of each transaction on the receipt so that they do not have to change anything in the register library itself.
+As the manufacturer you do NOT want the `Retailer` to modify the cash register code itself, so you decide you are going to give them blocks as arguments for the methods that build the format of each transaction on the receipt so that they do not have to change anything in the register library itself.
 
-To speed this up a little, your junior developer has provided you with a basic `Product`, `Transaction`, `Store` and `State` class, complete with properties and initializers where needed.
+The corporate office of a retailer will program the logic for all the registers remotely, and each register will be assigned a store (which has a location, e.g. New York, New Jersey, Connecticut). Each store has just one register which logs all customer transactions.
+
+To speed this process up a little, your junior developer has provided you with a basic `Product`, `Transaction`, `Store` and `State` class, complete with properties and initializers where needed.
 
 As senior developer, you have to do the heavy lifting of the blocks. Ha. Ha. Ha.
 
@@ -29,11 +31,11 @@ as well as two block properties. Since this is a lab on blocks, we'll let you fi
 
 This class will also have two methods called `applyCoupons` and `calculateTax`. They will both return an NSNumber for the total dollars saved by using coupons and the total amount of tax for all transactions on the `CashRegister` respectively.
 
-2) A `Retailer` class that has a method to `customizeRegisterLogic:` (where the user of the `CashRegister` will implement the `taxLogic` and `couponLogic` block properties that you declared in `CashRegister`).
+2) A `Retailer` class that has a method to `customizeRegisterLogic:` (where the user of the `CashRegister` will implement the `taxLogic` and `couponLogic` block properties that you declared in `CashRegister`). 
 
-3) We will serve as the "user" so we have provided the logic code to complete the `taxLogic` and `couponLogic` definitions below, that you can cut and paste in. We also provide a `generateTestData` method below to ensure you have implemented the whole `CashRegister` system with its custom logic correctly. 
+3) We will serve as your "retailer" client so we provid the logic code to complete the `taxLogic` and `couponLogic` definitions below. We also provide a `generateTestData` method below to ensure you have implemented the whole `CashRegister` system with its custom logic correctly. But to make sure you understand how both sides of blocks work, you will have to place this code in the correct place.
 
-Finally, to test all of your logic, create a `CashRegister` (and related necessary objects) in your AppDelegate and `applyCoupons` and `calculateTax` methods and see what you get back in values from the register.  If you've done it correctly, you will be given the total savings from coupons and the total tax collected of all transactions from the store. (Feel free to just NSLog the results since there are no tests in this lab.)
+Finally, to test all of your logic, create a `Retailer`, `CashRegister`, and related necessary objects, in your `AppDelegate` and NSLog the results of the `applyCoupons` and `calculateTax` methods and see what you get back in values from each store's register.  If you've done it correctly, you will be given the total savings from coupons and the total tax collected of all transactions from each store. (Feel free to just NSLog the results since there are no tests in this lab.)
 
 Note: The following tax logic code will cause a retain cycle. Read up on retain cycles with the links below to learn more. However, if you don't understand, just leave the code as is.
 
@@ -206,7 +208,7 @@ Note: The following tax logic code will cause a retain cycle. Read up on retain 
 ```
 
 ## Advanced
-Read up on how to compile a static library in Objective-C, to ensure you know how to keep your end user from modifying your lovely code base! Commit before compiling.
+Google "how to compile a static library in Objective-C", to ensure you know how to keep your end user from modifying your lovely code base! Commit before compiling.
 
 ## Notes
 
