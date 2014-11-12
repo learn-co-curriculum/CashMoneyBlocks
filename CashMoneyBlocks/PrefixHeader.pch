@@ -1,0 +1,17 @@
+//
+//  PrefixHeader.pch
+//  
+//
+//  Created by Zachary Drossman on 11/12/14.
+//
+//
+
+
+#ifndef __IPHONE_7_0
+#warning "This project uses features only available in iOS SDK 7.0 and later."
+#endif
+
+#ifdef OBJC
+@import UIKit;
+@import Foundation;
+#endif
