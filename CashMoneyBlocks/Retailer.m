@@ -17,9 +17,11 @@
 
 - (void)customizeRegisterLogic:(CashRegister *)cashRegister {
     
+    __weak CashRegister *weakRegister = cashRegister;
+    
     cashRegister.taxLogic = ^NSNumber *(Transaction *transaction) {
     
-        NSNumber *taxAmount = @([transaction.product.price floatValue] * [cashRegister.store.state.taxRate floatValue]);
+        NSNumber *taxAmount = @([transaction.product.price floatValue] * [weakRegister.store.state.taxRate floatValue]);
         
         NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
         
@@ -32,7 +34,7 @@
                 
             case ProductCategoryApparel:
                 
-                if ([cashRegister.store.state.abbreviation isEqualToString:@"NY"] &&  [transaction.product.price floatValue]  < 100)
+                if ([weakRegister.store.state.abbreviation isEqualToString:@"NY"] &&  [transaction.product.price floatValue]  < 100)
                 {
                     return @0;
                 }

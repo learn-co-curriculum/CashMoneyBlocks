@@ -11,6 +11,8 @@
 
 @interface Retailer : NSObject
 
+@property (strong, nonatomic) NSArray *stores;
+
 - (void)customizeRegisterLogic:(CashRegister *)cashRegister;
 - (NSArray *)generateTransactionData;
 
