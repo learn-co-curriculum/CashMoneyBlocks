@@ -12,12 +12,12 @@
 		317BBDF61A02D7F900E50696 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 317BBDF41A02D7F900E50696 /* Main.storyboard */; };
 		317BBDF81A02D7F900E50696 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 317BBDF71A02D7F900E50696 /* Images.xcassets */; };
 		317BBDFB1A02D7F900E50696 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 317BBDF91A02D7F900E50696 /* LaunchScreen.xib */; };
+		31D0B4E11A13BD92005DE546 /* CashRegisterSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 31D0B4E01A13BD92005DE546 /* CashRegisterSpec.m */; };
 		31DBF9191A04771C00054BFE /* Product.m in Sources */ = {isa = PBXBuildFile; fileRef = 31DBF9121A04771C00054BFE /* Product.m */; };
 		31DBF91A1A04771C00054BFE /* State.m in Sources */ = {isa = PBXBuildFile; fileRef = 31DBF9141A04771C00054BFE /* State.m */; };
 		31DBF91B1A04771C00054BFE /* Store.m in Sources */ = {isa = PBXBuildFile; fileRef = 31DBF9161A04771C00054BFE /* Store.m */; };
 		31DBF91C1A04771C00054BFE /* Transaction.m in Sources */ = {isa = PBXBuildFile; fileRef = 31DBF9181A04771C00054BFE /* Transaction.m */; };
 		31DBF9211A0477B500054BFE /* CashRegister.m in Sources */ = {isa = PBXBuildFile; fileRef = 31DBF91E1A0477B500054BFE /* CashRegister.m */; };
-		31DBF9221A0477B500054BFE /* Retailer.m in Sources */ = {isa = PBXBuildFile; fileRef = 31DBF9201A0477B500054BFE /* Retailer.m */; };
 		7FA1B3278F83DFF2AAEFEE33 /* libPods-CashMoneyBlocksTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C255C4EC37E0F78CF84C2A0 /* libPods-CashMoneyBlocksTests.a */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +43,7 @@
 		317BBE001A02D7F900E50696 /* CashMoneyBlocksTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CashMoneyBlocksTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		317BBE051A02D7F900E50696 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		31D0B4DF1A13BADA005DE546 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		31D0B4E01A13BD92005DE546 /* CashRegisterSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CashRegisterSpec.m; sourceTree = "<group>"; };
 		31DBF9111A04771C00054BFE /* Product.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Product.h; sourceTree = "<group>"; };
 		31DBF9121A04771C00054BFE /* Product.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Product.m; sourceTree = "<group>"; };
 		31DBF9131A04771C00054BFE /* State.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = State.h; sourceTree = "<group>"; };
@@ -53,8 +54,6 @@
 		31DBF9181A04771C00054BFE /* Transaction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Transaction.m; sourceTree = "<group>"; };
 		31DBF91D1A0477B500054BFE /* CashRegister.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CashRegister.h; sourceTree = "<group>"; };
 		31DBF91E1A0477B500054BFE /* CashRegister.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CashRegister.m; sourceTree = "<group>"; };
-		31DBF91F1A0477B500054BFE /* Retailer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Retailer.h; sourceTree = "<group>"; };
-		31DBF9201A0477B500054BFE /* Retailer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Retailer.m; sourceTree = "<group>"; };
 		4D1EB6CE20110279FE16CE50 /* Pods-CashMoneyBlocksTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CashMoneyBlocksTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CashMoneyBlocksTests/Pods-CashMoneyBlocksTests.release.xcconfig"; sourceTree = "<group>"; };
 		6C255C4EC37E0F78CF84C2A0 /* libPods-CashMoneyBlocksTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CashMoneyBlocksTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		89D40F21CA15CE83881FD0B1 /* Pods-CashMoneyBlocksTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CashMoneyBlocksTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CashMoneyBlocksTests/Pods-CashMoneyBlocksTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -128,8 +127,6 @@
 			children = (
 				31DBF91D1A0477B500054BFE /* CashRegister.h */,
 				31DBF91E1A0477B500054BFE /* CashRegister.m */,
-				31DBF91F1A0477B500054BFE /* Retailer.h */,
-				31DBF9201A0477B500054BFE /* Retailer.m */,
 				317BBDEE1A02D7F900E50696 /* AppDelegate.h */,
 				317BBDEF1A02D7F900E50696 /* AppDelegate.m */,
 				3178571D1A07E231002BA91C /* Model */,
@@ -155,6 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				317BBE041A02D7F900E50696 /* Supporting Files */,
+				31D0B4E01A13BD92005DE546 /* CashRegisterSpec.m */,
 			);
 			path = CashMoneyBlocksTests;
 			sourceTree = "<group>";
@@ -313,7 +311,6 @@
 				31DBF91C1A04771C00054BFE /* Transaction.m in Sources */,
 				31DBF9211A0477B500054BFE /* CashRegister.m in Sources */,
 				31DBF9191A04771C00054BFE /* Product.m in Sources */,
-				31DBF9221A0477B500054BFE /* Retailer.m in Sources */,
 				317BBDF01A02D7F900E50696 /* AppDelegate.m in Sources */,
 				317BBDED1A02D7F900E50696 /* main.m in Sources */,
 				31DBF91B1A04771C00054BFE /* Store.m in Sources */,
@@ -325,6 +322,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				31D0B4E11A13BD92005DE546 /* CashRegisterSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

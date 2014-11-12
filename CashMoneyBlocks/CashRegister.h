@@ -7,12 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
-@class Transaction;
+#import "Transaction.h"
 #import "Store.h"
 
 @interface CashRegister : NSObject
 
-@property (strong, nonatomic) Store *store;
 @property (strong, nonatomic) NSArray *transactions;
 @property (nonatomic, copy) NSNumber * (^couponLogic)(Transaction *transaction);
 @property (nonatomic, copy) NSNumber * (^taxLogic)(Transaction *transaction);
