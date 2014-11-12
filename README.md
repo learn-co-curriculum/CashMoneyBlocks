@@ -13,15 +13,15 @@ You are the lead software engineer for a manufacturer that makes the cash regist
 
 As the manufacturer you do NOT want the `Retailer` to modify the cash register code itself, so you decide you are going to give them blocks as arguments for the methods that build the format of each transaction on the receipt so that they do not have to change anything in the register library itself.
 
-The corporate office of a retailer will program the logic for all the registers remotely, and each register will be assigned a store (which has a location, e.g. New York, New Jersey, Connecticut). Each store has just one register which logs all customer transactions.
+The corporate office of a retailer will then program the logic for all the registers remotely, and each register will be assigned a store (which has a location, e.g. New York, New Jersey, Connecticut). Each store has just one register which logs all customer transactions.
 
 To speed this process up a little, your junior developer has provided you with a basic `Product`, `Transaction`, `Store` and `State` class, complete with properties and initializers where needed.
 
 As senior developer, you have to do the heavy lifting of the blocks. Ha. Ha. Ha.
 
-Here is what you will need:
+Here is what you will need to do:
 
-1) A `CashRegister` class with four properties including:
+1) Build a `CashRegister` class with four properties including:
 
 @property (strong, nonatomic) Store *store;
 
@@ -31,17 +31,11 @@ as well as two block properties. Since this is a lab on blocks, we'll let you fi
 
 This class will also have two methods called `applyCoupons` and `calculateTax`. They will both return an NSNumber for the total dollars saved by using coupons and the total amount of tax for all transactions on the `CashRegister` respectively.
 
-2) A `Retailer` class that has a method to `customizeRegisterLogic:` (where the user of the `CashRegister` will implement the `taxLogic` and `couponLogic` block properties that you declared in `CashRegister`). 
+2) A test suite, which we have started for you. (Expected student response: Test practice too? Yes!!!)
 
-3) We will serve as your "retailer" client so we provid the logic code to complete the `taxLogic` and `couponLogic` definitions below. We also provide a `generateTestData` method below to ensure you have implemented the whole `CashRegister` system with its custom logic correctly. But to make sure you understand how both sides of blocks work, you will have to place this code in the correct place.
+The test suite should use the logic blocks for `taxLogic` and `couponLogic` provided below to ensure that your `CashRegister` object is working as expected. You will also need some test data, so we have included some code for you to cut and paste where appropriate in the test suite. We have also left you some hints on what to do in the test suite in the form of comments. But make sure you understand why you are placing the code in various places within the test suite!
 
-Finally, to test all of your logic, create a `Retailer`, `CashRegister`, and related necessary objects, in your `AppDelegate` and NSLog the results of the `applyCoupons` and `calculateTax` methods and see what you get back in values from each store's register.  If you've done it correctly, you will be given the total savings from coupons and the total tax collected of all transactions from each store. (Feel free to just NSLog the results since there are no tests in this lab.)
-
-Note: The following tax logic code will cause a retain cycle. Read up on retain cycles with the links below to learn more. However, if you don't understand, just leave the code as is.
-
-* [Capturing My(self)](http://blackpixel.com/blog/2014/03/capturing-myself.html)
-* [Objective-C Block Caveat](http://albertodebortoli.github.io/blog/2013/08/03/objective-c-blocks-caveat/)
-* [Debugging Retain Cycles](http://www.reigndesign.com/blog/debugging-retain-cycles-in-objective-c-four-likely-culprits/)
+If you've done it correctly, you will be given the total savings from coupons and the total tax collected of all transactions from each store, as the expect statements suggest.
 
 ####Tax Logic
 ```objc
@@ -118,9 +112,8 @@ Note: The following tax logic code will cause a retain cycle. Read up on retain 
 ```
 
 
-####Transaction Data Method
+####Transaction Data Code
 ```objc
-- (NSArray *)generateTransactionData {
     
     Product *apple = [[Product alloc] initWithProductDescription:@"Granny Smith" UPC:@"0000000000415" Price:@0.95  Size:@1 Measure:@"ea" andProductCategory:ProductCategoryGrocery];
     
@@ -200,11 +193,6 @@ Note: The following tax logic code will cause a retain cycle. Read up on retain 
     
     Transaction *transactionSix = [[Transaction alloc] initWithProduct:functionalProgrammingWithSwiftBook Quantity:@1 Date:date6];
 
-    NSArray *transactions = @[transactionOne, transactionTwo, transactionThree, transactionFour, transactionFive, transactionSix];
-    
-    return transactions;
-    
-}
 ```
 
 ## Advanced

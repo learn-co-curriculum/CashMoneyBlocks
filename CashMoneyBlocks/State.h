@@ -7,11 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+@class CashRegister;
 
 @interface State : NSObject
 
 @property (strong, nonatomic) NSNumber *taxRate;
 @property (strong, nonatomic) NSString *name;
 @property (strong, nonatomic) NSString *abbreviation;
+@property (strong, nonatomic) CashRegister *cashRegister;
 
 @end
