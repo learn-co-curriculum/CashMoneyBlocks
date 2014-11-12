@@ -17,12 +17,13 @@ typedef NS_ENUM(NSUInteger, ProductCategory) {
     ProductCategoryOther = 5,
 };
 
-@interface Product : NSObject
-
+@interface Product : NSObject {
+    NSNumber *_whatever;
+NSNumber *_size;
+}
 @property (nonatomic, strong) NSString *productDescription;
 @property (nonatomic, strong) NSString *UPC;
 @property (nonatomic, strong) NSNumber *price;
-@property (nonatomic, strong) NSNumber *size;
 @property (nonatomic, strong) NSString *measure;
 @property (nonatomic) ProductCategory productCategory;
 
