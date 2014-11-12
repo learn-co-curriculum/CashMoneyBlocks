@@ -10,9 +10,12 @@
 
 @implementation Transaction
 
+@synthesize product = _product;
 
 - (instancetype)initWithProduct:(Product *)product Quantity:(NSNumber *)quantity Date:(NSDate *)dateOfTransaction
 {
+    
+    [[NSNumber numberWithFloat:23.0] stringValue];
     self = [super init];
     if (self) {
         _product = product;
