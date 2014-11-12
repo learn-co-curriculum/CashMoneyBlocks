@@ -208,7 +208,7 @@ Note: The following tax logic code will cause a retain cycle. Read up on retain 
 ```
 
 ## Advanced
-Read up on how to compile a static library in Objective-C, to ensure you know how to keep your end user from modifying your lovely code base! Commit before compiling.
+Google "how to compile a static library in Objective-C", to ensure you know how to keep your end user from modifying your lovely code base! Commit before compiling.
 
 ## Notes
 
