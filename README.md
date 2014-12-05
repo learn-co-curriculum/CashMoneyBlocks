@@ -9,7 +9,7 @@ languages: objc
 
 **You are highly encouraged to read through the entire readme before attempting to do this lab!**
 
-You are the lead software engineer for a manufacturer that makes the cash register hardware. Clients (e.g. Target, Walmart, Macys, Whole Foods) generally want to be able to program their cash registers after the fact to use their own receipt formats and program items into the register such that the pricing rules can change periodically (e.g. couponing, taxes, etc.)
+You are the lead software engineer for a manufacturer that makes cash registers. Clients (e.g. Target, Walmart, Macys, Whole Foods) generally want to be able to program their cash registers after the fact to use their own receipt formats and program items into the register such that the pricing rules can change periodically (e.g. couponing, taxes, etc.)
 
 As the manufacturer you do NOT want the `Retailer` to modify the cash register code itself, so you decide you are going to give them blocks as arguments for the methods that build the format of each transaction on the receipt so that they do not have to change anything in the register library itself.
 

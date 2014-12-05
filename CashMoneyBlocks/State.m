@@ -8,6 +8,10 @@
 
 #import "State.h"
 
+@interface State ()
+
+@end
+
 @implementation State
 
 -(NSNumber *)taxRate {

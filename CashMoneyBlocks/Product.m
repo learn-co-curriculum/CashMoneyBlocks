@@ -35,12 +35,4 @@
     
 }
 
--(void)setSize:(NSNumber *)size {
-    _size = size;
-    
-}
-
--(NSNumber *)size {
-    return _size;
-}
 @end
