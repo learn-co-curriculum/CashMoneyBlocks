@@ -192,8 +192,6 @@ If you've done it correctly, you will be given the total savings from coupons an
 
 ```
 
-## Advanced
-Google "how to compile a static library in Objective-C", to ensure you know how to keep your end user from modifying your lovely code base! Commit before compiling.
 
 ## Notes
 
