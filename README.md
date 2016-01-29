@@ -203,4 +203,4 @@ If you've done it correctly, you will be given the total savings from coupons an
 
 * In our contrived example, the tax gets applied to the items gross price (i.e. before the coupon discount gets applied). Feel free to try to get fancy and make them work together if you get this far!
 
-<a href='https://learn.co/lessons/CashMoneyBlocks' data-visibility='hidden'>View this lesson on Learn.co</a>
+<p data-visibility='hidden'>View <a href='https://learn.co/lessons/CashMoneyBlocks' title='DEPRECATED 8/20/15'>DEPRECATED 8/20/15</a> on Learn.co and start learning to code for free.</p>
